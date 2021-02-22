@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Twitch.tv" />
+    <title>Twitch.tv</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Nav bar -->
+      <header>
+        <nav class="nav-container">
+          <div class="logo">
+            <img src="./src/TwitchGlitchPurple.svg" alt="Twitch Logo" />
+          </div>
+          <ul class="left-menu">
+            <li>瀏覽</li>
+            <li>電競</li>
+            <li>音樂</li>
+            <li><img src="./src/dot.svg" alt="Twitch More" /></li>
+          </ul>
+          <div class="search-container" id="search">
+            <form action="GET">
+              <input
+                type="text"
+                class="search-input"
+                id="twitch-search"
+                placeholder="搜尋"
+                aria-label="Search"
+              />
+              <button type="submit" disabled>
+                <img src="./src/magnifiler.svg" alt="search" />
+              </button>
+            </form>
+          </div>
+          <ul class="right-menu">
+            <li><img src="./src/crown.svg" alt="Twitch Prime" /></li>
+            <li><button>登入</button></li>
+            <li><button>註冊</button></li>
+            <li><img src="./src/userBtn.svg" alt="My Twitch Account" /></li>
+          </ul>
+        </nav>
+      </header>
+
+      <!-- Aside -->
+      <aside class="recommend">
+        <!-- Recommend -->
+        <h2>推薦的頻道</h2>
+        <div class="recommend-area"></div>
+        <!-- AD -->
+        <div class="join-block">
+          <h5>加入<span> Twitch </span>社群的行列！</h5>
+          <p>探索全球最精彩的實況內容。</p>
+          <button>註冊</button>
+        </div>
+      </aside>
+      <!-- Main -->
+      <main>
+        <div class="main-container">
+          <!-- Stream Banner -->
+          <div class="block-area carousel">
+            <div class="left-arrow">
+              <img src="./src/left_arrow.svg" alt="switch video left" />
+            </div>
+            <div class="right-arrow">
+              <img src="./src/right_arrow.svg" alt="switch video right" />
+            </div>
+            <!-- 左側備選 -->
+            <div class="carousel-card left-last-card"></div>
+            <div class="carousel-card left-first-card"></div>
+            <!-- 主卡 -->
+            <div class="carousel-card main"></div>
+            <!-- 右側備選 -->
+            <div class="carousel-card right-first-card"></div>
+            <div class="carousel-card right-last-card"></div>
+          </div>
+          <!-- You May Like Channel -->
+          <div class="block-area stream-like">
+            <h3>您可能會喜歡的 Live 頻道</h3>
+
+            <div class="maylike-area"></div>
+            <div class="show-more">
+              <div class="show-more-btn">
+                <a href="#">顯示更多</a>
+                <img src="./src/down_btn.svg" alt="show-more-button" />
+              </div>
+            </div>
+          </div>
+
+          <!-- You May Like Category -->
+          <div class="block-area game-category">
+            <h3>您可能會喜歡的<span>分類</span></h3>
+            <div class="category-area"></div>
+            <div class="show-more">
+              <div class="show-more-btn">
+                <a href="#">顯示更多</a>
+                <img src="./src/down_btn.svg" alt="show-more-button" />
+              </div>
+            </div>
+          </div>
+
+          <!-- 你可能想要的 20 部影片 -->
+          <div class="block-area maylikeTwenty">
+            <h3>你可能想看的 20 個實況</h3>
+            <div class="twenty-area">
+              <h4>點擊分類瀏覽...</h4>
+            </div>
+            <div class="show-more">
+              <div class="show-more-btn">
+                <a href="#">沒有顯示更多了</a>
+                <img src="./src/down_btn.svg" alt="show-more-button" />
+              </div>
+            </div>
+          </div>
+
+          <div class="footer" style="width: 100%; height: 100px"></div>
+        </div>
+      </main>
+    </div>
+    <script src="https://player.twitch.tv/js/embed/v1.js"></script>
+    <script type="module" src="./script.js"></script>
+  </body>
+</html>
